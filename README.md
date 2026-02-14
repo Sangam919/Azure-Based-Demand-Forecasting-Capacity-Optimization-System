@@ -569,10 +569,10 @@ in the Software without restriction...
 
 ## 📞 Contact & Support
 
-- **Project Maintainer**: [Your Name]
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile]
-- **Issues**: [GitHub Issues](https://github.com/yourusername/azure-demand-forecasting/issues)
+- **Project Maintainer**: Sangam Srivastav
+- **Email**: sangamsri555@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/sangamsri/
+- **Issues**: [GitHub Issues](https://github.com/Sangam919/azure-demand-forecasting/issues)
 
 ---
 
