@@ -1,0 +1,94 @@
+================================================================================
+AZURE DEMAND FORECASTING - MILESTONE 2 COMPLETION REPORT
+Generated: February 19, 2026
+================================================================================
+
+FEATURE ENGINEERING SUMMARY:
+----------------------------
+Input Dataset             : azure_demand_cleaned.csv
+Output Dataset            : azure_demand_feature_engineered.csv
+Original Features         : 16
+New Features Created      : 9
+Total Features            : 25
+
+DATA TRANSFORMATION:
+-------------------
+Starting Records          : 5,200
+Records Dropped (NaN)     : 240
+Final Records             : 4,960
+Data Retention Rate       : 95.4%
+
+Date Range (Original)     : April 1, 2023 to March 31, 2025
+Date Range (Final)        : May 1, 2023 to March 31, 2025
+Note: First 30 days dropped per region-service due to lag features
+
+FEATURE CATEGORIES:
+------------------
+1. Time Features (1)
+   - week_of_year: ISO calendar week number (1-52)
+
+2. Lag Features (3)
+   - lag_1: Usage from 1 day ago
+   - lag_7: Usage from 7 days ago (week-over-week comparison)
+   - lag_30: Usage from 30 days ago (month-over-month comparison)
+
+3. Rolling Statistics (2)
+   - rolling_mean_7: 7-day moving average (trend indicator)
+   - rolling_std_7: 7-day volatility (demand stability measure)
+
+4. Capacity Metrics (3)
+   - capacity_utilization: Actual usage / Provisioned capacity ratio
+   - over_provisioned_flag: 1 if utilization < 75%, 0 otherwise
+   - high_stress_flag: 1 if utilization > 90%, 0 otherwise
+
+DATA QUALITY:
+------------
+Missing Values (Before dropna)  : 392 (in lag and rolling features)
+Missing Values (After dropna)   : 0
+Data Completeness                : 100%
+
+KEY STATISTICS (Final Dataset):
+-------------------------------
+Total Records                    : 4,960
+Regions Covered                  : 4 (US-East, US-West, Europe-North, India-South)
+Service Types                    : 2 (Compute, Storage)
+Records per Region-Service       : ~620 each
+
+FEATURE ENGINEERING BENEFITS:
+-----------------------------
+✓ Historical patterns captured through lag features
+✓ Trend analysis enabled via rolling statistics
+✓ Capacity planning insights through utilization metrics
+✓ Anomaly detection support via volatility measures
+✓ Ready for time-series forecasting models
+
+TECHNICAL NOTES:
+---------------
+- Lag and rolling features calculated per region-service group
+- NaN values from lag/rolling operations handled by dropping initial periods
+- All features properly sorted by timestamp for time-series integrity
+- Capacity utilization normalized to 0-1 scale for modeling
+
+NEXT STEPS (MILESTONE 3):
+-------------------------
+1. Split data into train/validation/test sets (time-based split)
+2. Train baseline models (ARIMA, Naive forecasting)
+3. Train ML models (XGBoost, Random Forest, LightGBM)
+4. Evaluate model performance (MAE, RMSE, MAPE)
+5. Select best model for production deployment
+
+POTENTIAL MODEL INPUTS:
+----------------------
+Target Variable           : usage_units
+Feature Count             : 24 (excluding target)
+Categorical Features      : region, service_type
+Numerical Features        : 22
+Time-based Features       : 7 (year, month, quarter, day_of_week, is_weekend, week_of_year)
+Lag Features             : 3
+Rolling Features         : 2
+Capacity Features        : 3
+Other Features           : 7
+
+================================================================================
+MILESTONE 2 STATUS: COMPLETED SUCCESSFULLY
+================================================================================
