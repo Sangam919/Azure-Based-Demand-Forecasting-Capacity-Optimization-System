@@ -1,73 +1,53 @@
+MILESTONE 3 - MODEL TRAINING & EVALUATION
+Completed: March 2026
 
-================================================================================
-AZURE DEMAND FORECASTING - MILESTONE 3 COMPLETION REPORT
-Generated: March 09, 2026
-================================================================================
-
-MODEL DEVELOPMENT SUMMARY:
--------------------------
-Dataset Used              : azure_demand_feature_engineered.csv
-Total Samples             : 4,960
-Training Samples          : 3,968 (80%)
-Test Samples              : 992 (20%)
-Features Used             : 22
-Target Variable           : usage_units
-
-MODELS TRAINED:
---------------
-1. Naive Baseline (Previous Day)
-2. Random Forest (100 trees, max_depth=15)
-3. Gradient Boosting (100 estimators, max_depth=7, lr=0.1)
-
-MODEL PERFORMANCE (Test Set):
------------------------------
-Naive Baseline:
-  - MAE:  1851.88 units
-  - RMSE: 2324.77 units
-  - MAPE: 21.10%
-  - R²:   0.1034
-
-Random Forest:
-  - MAE:  40.06 units
-  - RMSE: 90.40 units
-  - MAPE: 0.44%
-  - R²:   0.9986
-
-Gradient Boosting:
-  - MAE:  40.01 units
-  - RMSE: 89.48 units
-  - MAPE: 0.43%
-  - R²:   0.9987
-
-BEST MODEL:
-----------
-Selected Model            : Gradient Boosting
-Selection Criteria        : Lowest MAPE
-MAPE Achievement          : 0.43%
-
-TOP 5 IMPORTANT FEATURES:
--------------------------
-             feature  importance
-provisioned_capacity    0.912760
-capacity_utilization    0.040406
-     utilization_pct    0.033877
-     buffer_capacity    0.011349
-       rolling_std_7    0.000840
-
-KEY INSIGHTS:
+DATASET USED
 ------------
-- ML models significantly outperform naive baseline
-- Lag features (past usage) are critical for predictions
-- Rolling statistics help capture trends
-- Model achieves <5% MAPE target (successful forecasting)
+File: azure_demand_feature_engineered.csv
+Total samples: 4,960
+Training: 3,968 (80%)
+Testing: 992 (20%)
+Features used: 22
 
-NEXT STEPS (MILESTONE 4):
--------------------------
-1. Deploy selected model to production
-2. Create forecast generation pipeline
-3. Integrate with capacity planning dashboard
-4. Set up model monitoring and retraining
+MODELS TRAINED
+--------------
+1. Naive Baseline (uses yesterday's value)
+2. Random Forest (100 trees)
+3. Gradient Boosting (100 estimators)
 
-================================================================================
-MILESTONE 3 STATUS: COMPLETED SUCCESSFULLY
-================================================================================
+RESULTS
+-------
+Model              MAE      RMSE    MAPE     RÂ²
+Naive Baseline     1852     2325    21.1%    0.10
+Random Forest      40       90      0.44%    0.9986
+Gradient Boosting  40       89      0.43%    0.9987
+
+BEST MODEL: Gradient Boosting
+- MAPE: 0.43% (target was <5%, exceeded!)
+- Very accurate predictions
+- Reliable for production use
+
+TOP 3 IMPORTANT FEATURES
+------------------------
+1. provisioned_capacity (91%)
+2. capacity_utilization (4%)
+3. utilization_pct (3%)
+
+KEY FINDINGS
+------------
+- ML models are 48x better than naive approach
+- Provisioned capacity is the strongest predictor
+- Model achieves excellent accuracy (99.87% variance explained)
+- Ready for deployment
+
+BUSINESS IMPACT
+---------------
+With 0.43% error rate:
+- Highly accurate demand forecasting
+- Better capacity planning decisions
+- Reduced over/under-provisioning
+- Estimated savings potential: significant
+
+NEXT STEPS
+----------
+Milestone 4: Deploy model and create forecasting pipeline
