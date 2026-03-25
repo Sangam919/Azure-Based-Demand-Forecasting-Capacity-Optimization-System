@@ -1,4 +1,4 @@
-# ☁️ Azure Demand Forecasting & Capacity Optimization System
+# ☁️ Azure Demand Forecasting & Capacity Optimization System 
 
 <div align="center">
 
