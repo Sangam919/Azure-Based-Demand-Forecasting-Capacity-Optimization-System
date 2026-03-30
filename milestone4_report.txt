@@ -1,0 +1,68 @@
+MILESTONE 4 - FORECAST INTEGRATION & VISUALIZATION
+Completed: March 2026
+
+Dataset Used:
+
+* azure_demand_feature_engineered.csv
+* forecast_next_30_days.csv
+
+What I did in this milestone:
+
+* Used trained model to generate future demand (next 30 days)
+* Created forecast dataset for all regions and services
+* Built Power BI dashboard to visualize results
+* Generated capacity planning insights
+
+Forecast Summary:
+
+* Total Forecast Days: 30
+* Regions Covered: 4
+* Service Types: 2 (Compute, Storage)
+* Total Forecast Records: 240
+
+Key Metrics (Forecast):
+
+* Total Predicted Usage: ~2.7M units
+* Total Predicted Cost: ~$100K
+* Average Utilization: ~87%
+
+Power BI Dashboard:
+
+* Created interactive dashboard for analysis
+* Used forecast data and historical data together
+
+Visualizations Included:
+
+* Actual vs Forecast demand trend (line chart)
+* Region-wise demand distribution (bar chart)
+* Service-wise usage split (donut chart)
+* Cost distribution by region (pie chart)
+* KPI cards (total usage, cost, utilization)
+
+Key Insights:
+
+* Some regions show high utilization (>85%) → need capacity increase
+* Balanced usage between Compute and Storage
+* Demand trend shows consistent growth pattern
+* Few regions have optimal capacity (no action needed)
+
+Capacity Planning Decisions:
+
+* Increase capacity in high utilization regions
+* Maintain capacity where utilization is stable
+* Monitor regions close to threshold
+
+What I learned:
+
+* How to convert ML predictions into business insights
+* How to build dashboards using Power BI
+* Importance of visualization in decision making
+* End-to-end pipeline from data → model → insights
+
+Next Step (if extended):
+
+* Automate forecast generation
+* Add real-time dashboard updates
+* Deploy model as API
+
+MILESTONE 4 STATUS: COMPLETED

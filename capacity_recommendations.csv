@@ -1,0 +1,9 @@
+region,service_type,action,priority,reason,avg_utilization,max_utilization
+Europe-North,Compute,INCREASE CAPACITY,HIGH,Peak utilization: 98.6%,80.92,98.64
+Europe-North,Storage,MAINTAIN,LOW,Utilization within normal range (69.5%),69.55,76.59
+India-South,Compute,MAINTAIN,LOW,Utilization within normal range (68.5%),68.53,82.41
+India-South,Storage,INCREASE CAPACITY,HIGH,Peak utilization: 109.6%,96.69,109.59
+US-East,Compute,INCREASE CAPACITY,HIGH,Peak utilization: 104.6%,86.51,104.56
+US-East,Storage,INCREASE CAPACITY,HIGH,Peak utilization: 110.1%,97.4,110.07
+US-West,Compute,INCREASE CAPACITY,HIGH,Peak utilization: 126.8%,112.5,126.85
+US-West,Storage,INCREASE CAPACITY,HIGH,Peak utilization: 99.3%,86.78,99.31
