@@ -122,7 +122,7 @@ Raw Data → Cleaning → Feature Engineering → ML Model → Forecast → Dash
 
 ## 📊 Power BI Dashboard
 
-![Power BI Dashboard](powerbi_dashboard.png)
+<img width="1166" height="646" alt="image" src="https://github.com/user-attachments/assets/361aef2e-fe6a-4604-9a2f-bd54834bf1d1" />
 
 ---
 
