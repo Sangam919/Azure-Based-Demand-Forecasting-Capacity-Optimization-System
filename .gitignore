@@ -30,6 +30,8 @@ ENV/
 
 # Generated CSV files (can be recreated by running scripts)
 azure_demand_feature_engineered.csv
+forecast_next_30_days.csv
+capacity_recommendations.csv
 model_comparison.csv
 feature_importance.csv
 predictions.csv
